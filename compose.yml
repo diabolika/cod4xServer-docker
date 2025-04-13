@@ -1,6 +1,6 @@
 services:
   cod4server:
-    build: .
+    image: henkallsn/docker-cod4
     # Change the name if you want to.
     container_name: COD4DED
     network_mode: "host"
