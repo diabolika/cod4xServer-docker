@@ -1,0 +1,17 @@
+services:
+  cod4server:
+    build: .
+    # Change the name if you want to.
+    container_name: COD4DED
+    network_mode: "host"
+    environment:
+      - READY=YES
+      - EXECFILE=server.cfg
+      - SERVERTYPE=1
+      # This port can be changed. It is UDP.
+      - PORT=28960
+      - MAP=+map_rotate
+      # Mod name can be empty
+      - MODNAME=
+      - EXTRA=+set sv_authorizemode -1
+      - GETGAMEFILES=1
